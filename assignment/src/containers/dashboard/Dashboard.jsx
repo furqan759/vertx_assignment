@@ -1,6 +1,5 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom';
-import { Tabs } from '../../components/Tabs'
 import { Page } from '../page-layout';
 
 export const Dashboard = () => {
