@@ -1,7 +1,21 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
+import { Tabs } from '../../components/Tabs'
+import { Page } from '../page-layout';
 
 export const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <>
+      <Page pageTitle={'Dashboard'} tabConfig={[
+        {
+          name: "Overview",
+          to: "/dashboard/overview",
+        },
+        {
+          name: "Demographics",
+          to: "/dashboard/demographics"
+        },
+      ]} Outlet={<Outlet />} />
+    </>
   )
 }

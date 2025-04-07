@@ -31,7 +31,7 @@ export const Sidebar = () => {
         },
     ]
     return (
-        <div className='h-screen w-full flex'>
+        <div className='h-screen w-60 flex'>
             <div className='flex flex-col justify-between h-[calc(100vh-54px)] w-17 border-r-1 border-gray-900'>
                 <div className='relative border-b-1 border-gray-900'>
                     <img className='rounded-[50%] w-10 mx-auto mt-3 mb-3' src={User} alt="user-image" />
@@ -43,9 +43,9 @@ export const Sidebar = () => {
             </div>
             <div className='h-screen w-full border-r-1 border-gray-900 border-opacity-50'>
                 <div className='mt-5 ml-8 mr-15'>
+                    <ul>
                     {sideBarRoutes?.map((route, index) => (
-                        <ul>
-                            <li className='mb-5'>
+                            <li className='mb-5' key={index}>
                                 <NavLink
                                     to={route.to}
                                     className={({ isActive }) =>
@@ -58,8 +58,8 @@ export const Sidebar = () => {
                                 </NavLink>
 
                             </li>
-                        </ul>
                     ))}
+                    </ul>
                     {/* <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'></p></div>
                 <div><p className='font-bold mb-5 hover:text-gray-100 cursor-pointer'>Analytics</p></div>
                 <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'>Connect</p></div>

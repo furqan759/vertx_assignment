@@ -6,7 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
-import { Analytics, Dashboard } from './containers/index.js';
+import { Analytics, Dashboard, Overview } from './containers/index.js';
 import { Layout } from './containers/Layout.jsx';
 
 let router = createBrowserRouter([
@@ -21,10 +21,38 @@ let router = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard />,
+        children: [
+          {
+            index: true,
+            element: <Overview/>,
+          },
+          {
+            path: "overview",
+            element: <Overview/>,
+          },
+          {
+            path: "demographics",
+            element: <div>demographics Content</div>,
+          }
+        ]
       },
       {
         path: "analytics",
         element: <Analytics />,
+        children: [
+          {
+            index: true,
+            element: <Overview/>,
+          },
+          {
+            path: "overview",
+            element: <Overview/>,
+          },
+          {
+            path: "demographics",
+            element: <div>demographics Content</div>,
+          }
+        ]
       },
     ],
   },
