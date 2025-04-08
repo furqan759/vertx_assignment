@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router";
 import { Analytics, Dashboard, Overview } from './containers/index.js';
@@ -24,7 +25,7 @@ let router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Overview/>,
+            element: <Navigate to="overview" replace />,
           },
           {
             path: "overview",
@@ -50,7 +51,7 @@ let router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Overview/>,
+            element: <Navigate to="overview" replace />,
           },
           {
             path: "overview",

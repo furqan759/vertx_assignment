@@ -11,10 +11,11 @@ export const Tabs = ({ tabs = [] }) => {
                         <li className="me-2 block p-5 border-r-1 border-gray-900" key={ind}>
                             <NavLink
                                 to={tab.to}
-                                className={({ isActive }) =>
-                                    `font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer ${isActive ? 'text-white' : ''
+                                className={({ isActive, isPending }) =>
+                                    `font-bold mb-5 cursor-pointer transition-colors ${
+                                      isActive ? 'text-white' : 'text-gray-700 hover:text-gray-100'
                                     }`
-                                }
+                                  }
                             >
                                 {tab.name}
                             </NavLink>
@@ -43,9 +44,6 @@ export const Tabs = ({ tabs = [] }) => {
                     </li>
                 )
             })}
-        {/* <li className="me-2 p-5 pl-[37.5px] pr-[37.5px] border-l-1 border-gray-900">
-            <a href="#" className="font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer">More</a>
-        </li> */}
     </ul>
     </>
 

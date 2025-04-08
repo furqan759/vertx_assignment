@@ -7,19 +7,19 @@ export const Dashboard = () => {
     <Page pageTitle={'Dashboard'} showMoreBtn={false} tabConfig={[
       {
                   name: "Overview",
-                  to: "overview",
+                  to: "/dashboard/overview",
                 },
                 {
                   name: "Portfolio",
-                  to: "portfolio",
+                  to: "/dashboard/portfolio",
                 },
                 {
                   name: "Experience",
-                  to: "experience",
+                  to: "/dashboard/experience",
                 },
                 {
                   name: "Media",
-                  to: "media",
+                  to: "/dashboard/media",
                 }
     ]} Outlet={<Outlet />} />
 

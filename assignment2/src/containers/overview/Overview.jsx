@@ -50,7 +50,7 @@ export const Overview = () => {
                 <div className='p-4 border-solid border-[2px] rounded-[8px] border-gray-900 bg-opacity-1'>
                     <h4 className='text-[18px] font-bold'>Founded Companies</h4>
                     <h1 className='text-[64px] font-bold'>02</h1>
-                    <div className="flex justify-between items-start gap-[8rem]">
+                    <div className="flex justify-between items-start gap-[6rem]">
                         <div className='flex gap-[10px]'>
                         <img src={Joomla} className='w-10' alt="" />
                         <div className='flex flex-col'>
@@ -61,7 +61,7 @@ export const Overview = () => {
                         </div>
                         <p className='text-[10px]'>View Profile</p>
                     </div>
-                    <div className="flex justify-between mt-5 items-start gap-[8rem]">
+                    <div className="flex justify-between mt-5 items-start gap-[6rem]">
                         <div className='flex gap-[10px]'>
                         <img src={Joomla} className='w-10' alt="" />
                         <div className='flex flex-col'>
@@ -76,7 +76,7 @@ export const Overview = () => {
                 <div className='p-4 border-solid border-[2px] rounded-[8px] border-gray-900 bg-opacity-1'>
                     <h4 className='text-[18px] font-bold'>Experience</h4>
                     <h1 className='text-[64px] font-bold'>03</h1>
-                    <div className="flex justify-between items-center gap-[8rem]">
+                    <div className="flex justify-between items-center gap-[8rem] md:gap-[14rem]">
                         <div className='flex gap-[10px] items-center'>
                         <img src={Joomla} className='w-10' alt="" />
                         <div className='flex flex-col'>
@@ -86,7 +86,7 @@ export const Overview = () => {
                         </div>
                         <p className='text-[10px]'>View Profile</p>
                     </div>
-                    <div className="flex justify-between items-center gap-[8rem]">
+                    <div className="flex justify-between items-center gap-[8rem] md:gap-[14rem]">
                         <div className='flex gap-[10px] items-center'>
                         <img src={Joomla} className='w-10' alt="" />
                         <div className='flex flex-col'>
@@ -96,7 +96,7 @@ export const Overview = () => {
                         </div>
                         <p className='text-[10px]'>View Profile</p>
                     </div>
-                    <div className="flex justify-between items-center gap-[8rem]">
+                    <div className="flex justify-between items-center gap-[8rem] md:gap-[14rem]">
                         <div className='flex gap-[10px] items-center'>
                         <img src={Joomla} className='w-10' alt="" />
                         <div className='flex flex-col'>

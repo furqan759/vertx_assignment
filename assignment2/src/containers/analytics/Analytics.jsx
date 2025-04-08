@@ -8,11 +8,11 @@ export const Analytics = () => {
     <Page pageTitle={'Dashboard'} tabConfig={[
       {
         name: "Overview",
-        to: "/dashboard/overview",
+        to: "/analytics/overview",
       },
       {
         name: "Demographics",
-        to: "/dashboard/demographics"
+        to: "/analytics/demographics"
       },
     ]} Outlet={<Outlet />} />
   </>
