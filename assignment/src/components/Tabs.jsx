@@ -27,10 +27,10 @@ export const Tabs = ({ tabs = [] }) => {
             </li>
         </ul>
         {/* mobile view */}
-        <ul className="justify-evenly h-fit flex md:hidden flex-wrap w-full mb-6 md:mb-0 text-sm font-medium text-center text-gray-500 dark:text-gray-400 border-b-1 border-gray-900">
+        <ul className="justify-evenly h-fit flex md:hidden flex-nowrap w-full mb-6 md:mb-0 text-sm font-medium text-center text-gray-500 dark:text-gray-400 border-b-1 border-gray-900">
             {[...tabs, {name: "More", to: "/more"}]?.map((tab, ind) => {
                 return (
-                    <li className="me-2 block p-5 border-r-1 border-gray-900" key={ind}>
+                    <li className="me-2 block p-4 border-none" key={ind}>
                         <NavLink
                             to={tab.to}
                             className={({ isActive }) =>
