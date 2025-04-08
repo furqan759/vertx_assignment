@@ -16,8 +16,8 @@ let router = createBrowserRouter([
     element: <Layout />, // This is the layout wrapper
     children: [
       {
-        index: true,
-        element: <Dashboard />,
+        index: true, 
+        element: <Navigate to="dashboard/overview" replace />,
       },
       {
         path: "dashboard",
