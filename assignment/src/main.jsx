@@ -7,7 +7,7 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router";
-import { Analytics, Dashboard, Overview } from './containers/index.js';
+import { Analytics, Dashboard, Overview, Profile, ProfileOverview } from './containers/index.js';
 import { Layout } from './containers/Layout.jsx';
 
 let router = createBrowserRouter([
@@ -48,6 +48,24 @@ let router = createBrowserRouter([
           {
             path: "overview",
             element: <Overview/>,
+          },
+          {
+            path: "demographics",
+            element: <div>demographics Content</div>,
+          }
+        ]
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+        children: [
+          {
+            index: true,
+            element:  <Navigate to="overview" replace />,
+          },
+          {
+            path: "overview",
+            element: <ProfileOverview/>,
           },
           {
             path: "demographics",

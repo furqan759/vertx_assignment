@@ -2,34 +2,9 @@ import React from 'react'
 import { User } from '../../assets/img'
 import { PlusSolid } from '../../assets/icons'
 import { NavLink } from 'react-router-dom'
+import { sideBarRoutes } from '../../data/general'
 
 export const Sidebar = () => {
-    const sideBarRoutes = [
-        {
-            title: "Dashboard",
-            to: '/dashboard',
-        },
-        {
-            title: "Analytics",
-            to: '/analytics',
-        },
-        {
-            title: "Connect",
-            to: '/connect',
-        },
-        {
-            title: "Dealroom",
-            to: '/dealroom',
-        },
-        {
-            title: "Profile",
-            to: '/profile',
-        },
-        {
-            title: "Settings",
-            to: '/settings',
-        },
-    ]
     return (
         <div className='md:h-screen md:w-60 hidden w-full md:flex'>
             <div className='md:flex md:flex-col hidden justify-between h-[calc(100vh-54px)] w-17 border-r-1 border-gray-900'>

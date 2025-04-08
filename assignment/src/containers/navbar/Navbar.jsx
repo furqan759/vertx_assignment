@@ -2,8 +2,13 @@ import React from 'react'
 import { Button } from '../../components/Button'
 import { Joomla } from '../../assets/icons'
 import { User } from '../../assets/img'
+import { sideBarRoutes } from '../../data/general'
+import { useLocation } from 'react-router-dom'
 
 export const Navbar = () => {
+  const { pathname } = useLocation();
+  const currentPage =
+      sideBarRoutes.find((route) => pathname.startsWith(route.to))?.title || 'Page';
   return (
     <>
       <div className='bg-black hidden z-50 fixed md:flex top-0 w-full h-14 text-white border-gray-900 border-b-1'>
@@ -14,7 +19,7 @@ export const Navbar = () => {
           </div>
         </div>
         <div className='flex w-full items-center'>
-          <p className='pl-5'>Analytics</p>
+          <p className='pl-5'>{currentPage}</p>
           <div className='flex w-full justify-end h-full'>
             <Button title="Activity" className="cursor-pointer border-gray-900 border-l-1 px-[32px]" />
             <Button title="Log out" className="cursor-pointer border-gray-900 border-l-1 px-[32px]" />

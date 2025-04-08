@@ -2,24 +2,24 @@ import React from 'react'
 import { Outlet } from 'react-router-dom';
 import { Page } from '../page-layout';
 
-export const Dashboard = () => {
+export const Profile = () => {
   return (
     <Page pageTitle={'Dashboard'} showMoreBtn={false} tabConfig={[
       {
                   name: "Overview",
-                  to: "/dashboard/overview",
+                  to: "/profile/overview",
                 },
                 {
                   name: "Portfolio",
-                  to: "/dashboard/portfolio",
+                  to: "/profile/portfolio",
                 },
                 {
                   name: "Experience",
-                  to: "/dashboard/experience",
+                  to: "/profile/experience",
                 },
                 {
                   name: "Media",
-                  to: "/dashboard/media",
+                  to: "/profile/media",
                 }
     ]} Outlet={<Outlet />} />
 
