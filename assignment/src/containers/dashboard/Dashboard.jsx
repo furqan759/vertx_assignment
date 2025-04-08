@@ -4,17 +4,16 @@ import { Page } from '../page-layout';
 
 export const Dashboard = () => {
   return (
-    <>
-      <Page pageTitle={'Dashboard'} tabConfig={[
-        {
-          name: "Overview",
-          to: "/dashboard/overview",
-        },
-        {
-          name: "Demographics",
-          to: "/dashboard/demographics"
-        },
-      ]} Outlet={<Outlet />} />
-    </>
+    <Page pageTitle={'Dashboard'} tabConfig={[
+      {
+        name: "Overview",
+        to: "/dashboard/overview",
+      },
+      {
+        name: "Demographics",
+        to: "/dashboard/demographics"
+      },
+    ]} Outlet={<Outlet />} />
+
   )
 }

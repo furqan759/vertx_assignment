@@ -1,6 +1,6 @@
 import React from 'react'
-import { User } from '../assets/img'
-import { PlusSolid } from '../assets/icons'
+import { User } from '../../assets/img'
+import { PlusSolid } from '../../assets/icons'
 import { NavLink } from 'react-router-dom'
 
 export const Sidebar = () => {
@@ -31,8 +31,8 @@ export const Sidebar = () => {
         },
     ]
     return (
-        <div className='h-screen w-60 flex'>
-            <div className='flex flex-col justify-between h-[calc(100vh-54px)] w-17 border-r-1 border-gray-900'>
+        <div className='md:h-screen md:w-60 hidden w-full md:flex'>
+            <div className='md:flex md:flex-col hidden justify-between h-[calc(100vh-54px)] w-17 border-r-1 border-gray-900'>
                 <div className='relative border-b-1 border-gray-900'>
                     <img className='rounded-[50%] w-10 mx-auto mt-3 mb-3' src={User} alt="user-image" />
                     <div className='size-[9px] absolute rounded-[50%] top-[42px] right-[8px] bg-green-800'></div>
@@ -60,12 +60,6 @@ export const Sidebar = () => {
                             </li>
                     ))}
                     </ul>
-                    {/* <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'></p></div>
-                <div><p className='font-bold mb-5 hover:text-gray-100 cursor-pointer'>Analytics</p></div>
-                <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'>Connect</p></div>
-                <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'>Dealroom</p></div>
-                <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'>Profile</p></div>
-                <div><p className='font-bold mb-5 text-gray-700 hover:text-gray-100 cursor-pointer'>Settings</p></div> */}
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ export const Page = ({tabConfig, Outlet}) => {
   return (
     <div className='flex flex-col w-full'>
     <Tabs tabs={tabConfig} />
-    <div className='p-10 mx-auto'>
+    <div className='p-0 md:p-10 md:px-0 mx-auto'>
     {Outlet}
     </div>
     </div>

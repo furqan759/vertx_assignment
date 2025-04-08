@@ -10,9 +10,9 @@ export const Overview = () => {
     const chartRef = useRef(null);
     return (
         <div>
-            <h4 className='text-[28px] font-bold mb-6'>Overview</h4>
-            <div className='flex justify-start gap-[15px]'>
-                <div className='size-[38rem] w-[44rem] h-fit p-1 border-solid border-[2px] rounded-[8px] border-gray-900'><Line ref={chartRef} data={{
+            <h4 className='text-[28px] hidden md:block font-bold mb-6'>Overview</h4>
+            <div className='flex flex-col md:flex-row justify-start gap-[15px]'>
+                <div className='width-[100%] md:size-[44rem] md:w-[44rem] md:h-auto h-fit border-solid border-[2px] p-2 rounded-[8px] border-gray-900'><Line ref={chartRef} data={{
                     labels: revenueData?.map((data) => data.label),
                     datasets: [
                         {
@@ -23,25 +23,29 @@ export const Overview = () => {
                         }
                     ]
                 }} /></div>
-                <div className='size-[24rem] h-fit p-1 border-solid border-[2px] rounded-[8px] border-gray-900'>
+                <div className='width-[100%] md:size-[24rem] h-fit border-solid border-[2px] p-2 rounded-[8px] border-gray-900'>
                 <h4 className='text-[20px] font-bold m-2'>Insights</h4>
-                <div className='mb-3'>
+                <div className='flex md:flex-col justify-evenly'>
+
+                
+                <div className='md:mr-25'>
                 <h4 className='text-[16px] relative top-[14px] font-bold m-2'>Founders</h4>
-                <div className='flex justify-start gap-[4rem] items-center'>
-                <h4 className='text-[44px] font-bold m-2'>7.4K</h4>
+                <div className='flex justify-start md:gap-[4rem] items-center'>
+                <h4 className='text-[38px] md:text-[44px] font-bold m-2'>7.4K</h4>
                 <div className='flex flex-col items-center'>
                     <p className='text-green-700'>+000%</p>
                     <p className='text-gray-500'>(000)</p>
                 </div>
                 </div>
                 </div>
-                <div className='mb-3'>
+                <div className='md:mr-25'>
                 <h4 className='text-[16px] relative top-[14px] font-bold m-2'>Investors</h4>
-                <div className='flex justify-start gap-[4rem] items-center'>
-                <h4 className='text-[44px] font-bold m-2'>6.09K</h4>
+                <div className='flex justify-start md:gap-[4rem] items-center'>
+                <h4 className='text-[38px] md:text-[44px] font-bold m-2'>6.09K</h4>
                 <div className='flex flex-col items-center'>
                     <p className='text-green-700'>+000%</p>
                     <p className='text-gray-500'>(000)</p>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -55,12 +59,12 @@ export const Overview = () => {
                 </div>
             </div>
             <div className='mt-5'>
-            <div className='size-[100%] h-fit p-1 bg-no-repeat border-solid border-[2px] rounded-[8px] border-gray-900 bg-opacity-1' style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${Map})`,backgroundPosition: "center", backgroundRepeat: 'no-repeat'}}>
-                <div className="flex justify-between">
+            <div className='size-[100%] h-[50rem] md:h-[42rem] md:h-fit p-1 border-solid border-[2px] rounded-[8px] border-gray-900 bg-opacity-1' style={{background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${Map})`,backgroundPosition: "center", backgroundRepeat: 'no-repeat'}}>
+                <div className="flex flex-col md:flex-row justify-between h-full md:h-auto">
                 <div className='flex flex-col justify-between items-baseline'>
                 <h4 className='text-[20px] font-bold m-2'>Demographics</h4>
-                <div className='border-solid border-[1px] rounded-[20px] px-4 py-1 border-gray-900'>
-                <div className='flex gap-[15px]'>
+                <div className='border-solid border-[1px] hidden md:visible md:block rounded-[20px] px-4 py-1 border-gray-900'>
+                <div className='md:gap-[15px] hidden md:flex'>
                     <div className='flex items-center gap-[5px]'>
                         <div className='size-[10px] rounded-[50%] bg-blue-900'></div>
                         <h6>INDIA</h6>
