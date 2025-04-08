@@ -2,6 +2,7 @@
 body{
   background-color: #000;
   color: #fff;
+  font-family: 'Manrope', sans-serif;
 }
 
 input[type='range']::-webkit-slider-thumb {
