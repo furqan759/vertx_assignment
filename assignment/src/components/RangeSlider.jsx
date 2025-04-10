@@ -11,7 +11,7 @@ export const RangerSlider = ({title = '', demographicPercent, barColor = 'white'
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <label htmlFor="slider" className={`block mb-2 relative top-[8px] ${title ? "flex justify-between" : "text-right"} font-semibold text-white`}>
-        {title && title} <span className="text-gray-200">{value}</span>
+        {title && title} <span className="text-gray-200 relative top-[6px] text-[10px]">{value}%</span>
       </label>
      <input
         type="range"
